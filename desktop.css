@@ -163,7 +163,7 @@ body {
 }
 
 #toolbar .toolbar-icon.outlook {
-  background-image: url(Members/tori.png);
+  background-image: url(Members/taylor.png);
   background-repeat: no-repeat;
   background-size: 24px 24px;
   z-index: 100 !important;
@@ -171,7 +171,7 @@ body {
 }
 
 #toolbar .toolbar-icon.lookout {
-  background-image: url(Members/operator.png);
+  background-image: url(Members/pai.png);
   background-repeat: no-repeat;
   background-size: 24px 24px;
   z-index: 100 !important;
