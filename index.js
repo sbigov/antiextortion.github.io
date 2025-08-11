@@ -18,17 +18,27 @@ function togglePopup(id) {
 }
 
 function addPopupListeners(popupId, closeBtnClass, okBtnClass) {
-  document
-    .querySelector(`button[class='${closeBtnClass}']`)
-    .addEventListener("click", function () {
-      hidePopup(popupId);
-    });
-  document
-    .querySelector(`button[class='${okBtnClass}']`)
-    .addEventListener("click", function () {
-      hidePopup(popupId);
-    });
+  const popup = document.getElementById(popupId);
+  try {
+    const closeBtn = popup.querySelector(`button.${closeBtnClass}`);
+    if (!closeBtn) throw new Error("Close button not found");
+    closeBtn.addEventListener("click", () => hidePopup(popupId));
+  } catch(e) {
+    console.error(`Error adding close listener for ${popupId}:`, e);
+  }
+  try {
+    const okBtn = popup.querySelector(`button.${okBtnClass}`);
+    if (!okBtn) throw new Error("OK button not found");
+    okBtn.addEventListener("click", () => hidePopup(popupId));
+  } catch(e) {
+    console.error(`Error adding OK listener for ${popupId}:`, e);
+  }
 }
+
+
+
+
+
 
 document.addEventListener("DOMContentLoaded", function () {
   addPopupListeners("PopUpSpeculate", "SpeculateClose", "SpeculateOK");
@@ -36,6 +46,7 @@ document.addEventListener("DOMContentLoaded", function () {
   addPopupListeners("PopUpPai", "PaiClose", "PaiOK");
   addPopupListeners("PopUpHarmless", "HarmlessClose", "HarmlessOK");
   addPopupListeners("PopUpConvict", "ConvictClose", "ConvictOK");
+  addPopupListeners("PopUpAboutUs", "AboutUsClose", "AboutUsOK");
 });
 
 let date = new Date();

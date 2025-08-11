@@ -56,6 +56,12 @@
     to{border-right-color: transparent;}
   }
 
+    @keyframes blinkTextCursor{
+    from{border-right-color: rgba(255, 255, 255, 0.75);}
+    to{border-right-color: transparent;}
+  }
+
+
 .anim {
     white-space: nowrap;
     overflow: hidden;
@@ -67,5 +73,12 @@
     white-space: nowrap;
     overflow: hidden;
     animation: typewriter .5s steps(88) 2s 1 normal both,
+        blinkTextCursor 500ms steps(55) infinite normal;
+}
+
+.anim3 {
+    white-space: nowrap;
+    overflow: hidden;
+    animation: typewriter .5s steps(88) 2.5s 1 normal both,
         blinkTextCursor 500ms steps(55) infinite normal;
 }
