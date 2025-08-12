@@ -44,7 +44,7 @@ document.addEventListener("DOMContentLoaded", function () {
   addPopupListeners("PopUpSpeculate", "SpeculateClose", "SpeculateOK");
   addPopupListeners("PopUpTaylor", "TaylorClose", "TaylorOK");
   addPopupListeners("PopUpPai", "PaiClose", "PaiOK");
-  addPopupListeners("PopUpHarmless", "HarmlessClose", "HarmlessOK");
+  addPopupListeners("PopUpMisa", "MisaClose", "MisaOK");
   addPopupListeners("PopUpConvict", "ConvictClose", "ConvictOK");
   addPopupListeners("PopUpAboutUs", "AboutUsClose", "AboutUsOK");
 });
